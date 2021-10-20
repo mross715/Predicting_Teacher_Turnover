@@ -31,6 +31,9 @@ The datasets were:
 
 The final dataset that resulted from merging the occupational factors with student demographic factors contained approximately 8,000 records representing teachers in the School District of Philadelphia from the 2017-2018 school year. Those teachers were identified as either returning to their current placement or having turned over using employee information from the 2018-2019 school year. 
 
+<img src="images/Target.png">
+Approximately 20% of the teachers in the School District of Philadelphia did not return to their position following the 2017-2018 school year. This shows that there is a class imbalance to take into account for modeling as a majority of teachers do stay at their current school.
+
 # Data Preparation
 <img src="images/New_teacher.png">
 
