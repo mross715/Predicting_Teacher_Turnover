@@ -2,16 +2,12 @@
 ![image-1](https://www.elmhurst.edu/wp-content/uploads/2020/06/teacher-retention-illustration.jpg) <br />
 
 # Table of Contents
-* [Overview](https://github.com/mross715/Predicting_Teacher_Turnover#overview)
 * [Business Understanding](https://github.com/mross715/Predicting_Teacher_Turnover#business-understanding)
 * [Data Understanding](https://github.com/mross715/Predicting_Teacher_Turnover#data-understanding)
 * [Data Preparation](https://github.com/mross715/Predicting_Teacher_Turnover#data-preparation)
 * [Modeling](https://github.com/mross715/Predicting_Teacher_Turnover#modeling)
 * [Final Model](https://github.com/mross715/Predicting_Teacher_Turnover#final-model)
 * [Conclusions and Future Work](https://github.com/mross715/Predicting_Teacher_Turnover#conclusions-and-future-work)
-
-# Overview
-project overview
 
 # Business Understanding
 Teacher turnover has been identified as one of the key factors contributing to teacher shortages, which have been growing since 2015. According to the [Learning Policy Institute](https://learningpolicyinstitute.org/product/teacher-turnover-brief), about 8% of teachers leave the profession each year, two-thirds of them for reasons other than retirement and another 8% shift to different schools each year. Additionally, beginning teachers have the highest turnover rates and somewhere between 40-50% of those that go into teaching are gone within five years.
@@ -36,13 +32,26 @@ The datasets were:
 The final dataset that resulted from merging the occupational factors with student demographic factors contained approximately 8,000 records representing teachers in the School District of Philadelphia from the 2017-2018 school year. Those teachers were identified as either returning to their current placement or having turned over using employee information from the 2018-2019 school year. 
 
 # Data Preparation
-<img src="images/New_Teacher.png">
+<img src="images/New_teacher.png">
+
+New teachers make up less than 20% of the teacher force in Philadelphia. New teachers are those whose salaries indicate they have 3 years of experience or less. Interestingly, the rate of turnover for new teachers is nearly double that of teachers with more experience at 30%.
+
 <img src="images/Climate.png">
 
+The Climate domain measures student engagement and school climate, focusing on student attendance, student retention, and in- and out-of-school suspensions. A school’s progress at the domain level is categorized into four performance tiers based on the percentage of possible points earned. Schools with low climate scores and fall into the Intervene Tier have higher rates of teacher turnover than those schools with higher climate scores.
 
 # Modeling
+Many models were created for this project. The `DummyClassifier` was used as baseline model. In order to improve on that baseline, we designed `LinearSVD`, `LogisticRegression`, `DecisionTreeClassifier`, `RandomForestClassifier`, and `XGBoost` models. 
+
+Two methods were employed to mitigate the class imbalance:
+* Passing in class weights as balanced
+* Implementing SMOTE
+
+Through the model iteration process we are seeking to maximize the recall score by minimizing the number of false negatives, meaning teachers who were predicted to stay and actually end up leaving. By focusing on recall, we are trying to reduce the chances of the model missing a teacher who actually leaves their school the following year.
+
 <img src="images/Model_Scores.png">
-modeling
+
+The best performing model to predict teacher turnover is Logistic Regression. This model had the highest recall score on cross validation compared to all the other models at 70%.
 
 # Final Model
 <img src="images/Final_Matrix.png">
