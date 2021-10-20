@@ -36,14 +36,23 @@ The datasets were:
 The final dataset that resulted from merging the occupational factors with student demographic factors contained approximately 8,000 records representing teachers in the School District of Philadelphia from the 2017-2018 school year. Those teachers were identified as either returning to their current placement or having turned over using employee information from the 2018-2019 school year. 
 
 # Data Preparation
-eda
+<img src="images/New_Teacher.png">
+<img src="images/Climate.png">
+
 
 # Modeling
+<img src="images/Model_Scores.png">
 modeling
 
 # Final Model
-evaluation of final model
+<img src="images/Final_Matrix.png">
+On the holdout test set, the Logisitic Regression model performs at 63% for the recall score. The model does a good job of reducing those false negative where retention was predicted, but the teacher actually left their school. It's clear that the model is struggling to make correct predictions for teachers that were retained in their school with a lot of false positives, however, false positives in this context are not as negatively impactful to schools and the costs associated with high teacher turnover rates.
 
 # Conclusions and Future Work
-conclusion
+The recall score (63%) of the best model, Logistic Regression with PCA, is lower than ideal. However, being able to predict teacher turnover and plan ahead for intervention to retain teachers within the school district is better than high rates of teacher turnover that are costly with no information as to why.
+
+To improve the predictive power of the model, I recommend the following for next steps:
+
+* Obtain additional occupational factors including certification pathway, subject taught, and evaluation scores.
+* Expand model for use in other large urban school districts.
 
