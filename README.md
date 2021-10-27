@@ -80,10 +80,11 @@ Contact via email at mer423@nyu.edu
 
 ## Structure of Repository
 ```  
-├── .gitignore
 ├── images
-├── README.md
+├── .gitignore
 ├── Data_Prep.ipynb   
-├── Predicting_Teacher_Turnover.ipynb     
-└── Presentation.pdf   
+├── Predicting_Teacher_Turnover.ipynb
+├── README.md
+├── Presentation.pdf  
+└── src.py    
 ```
