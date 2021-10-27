@@ -43,6 +43,8 @@ New teachers make up less than 20% of the teacher force in Philadelphia. New tea
 
 The Climate domain measures student engagement and school climate, focusing on student attendance, student retention, and in- and out-of-school suspensions. A school’s progress at the domain level is categorized into four performance tiers based on the percentage of possible points earned. Schools with low climate scores and fall into the Intervene Tier have higher rates of teacher turnover than those schools with higher climate scores.
 
+Additional interactive data visualizations with additional features were built into an application on Heroku using files from this [GitHub Repository](https://github.com/mross715/try_dash_app.git). Check them out [here](https://exploring-teacher-turnover.herokuapp.com/)!
+
 # Modeling
 Many models were created for this project. The `DummyClassifier` was used as baseline model. In order to improve on that baseline, we designed `LinearSVD`, `LogisticRegression`, `DecisionTreeClassifier`, `RandomForestClassifier`, and `XGBoost` models. 
 
@@ -66,5 +68,22 @@ The recall score (63%) of the best model, Logistic Regression with PCA, is lower
 To improve the predictive power of the model, I recommend the following for next steps:
 
 * Obtain additional occupational factors including certification pathway, subject taught, and evaluation scores.
-* Expand model for use in other large urban school districts.
+* Include records across multiple school years.
 
+Additionally, in the future, I'd like to explore the generalizability of this model to be able to use in other large urban school districts such as New York City.
+
+## For More Information
+See the full analysis in the [Jupyter Notebook](Predicting_Teacher_Turnover.ipynb) or review [this presentation](presentation.pdf).
+
+Contact via email at mer423@nyu.edu 
+
+
+## Structure of Repository
+```  
+├── .gitignore
+├── images
+├── README.md
+├── Data_Prep.ipynb   
+├── Predicting_Teacher_Turnover.ipynb     
+└── Presentation.pdf   
+```
