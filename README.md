@@ -85,6 +85,6 @@ Contact via email at mer423@nyu.edu
 ├── Data_Prep.ipynb   
 ├── Predicting_Teacher_Turnover.ipynb
 ├── README.md
-├── Presentation.pdf  
+├── presentation.pdf  
 └── src.py    
 ```
